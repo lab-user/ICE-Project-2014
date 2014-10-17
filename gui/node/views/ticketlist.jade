@@ -1,0 +1,137 @@
+extends layout
+
+block content
+	link(rel='stylesheet', href='/stylesheets/ticketlist.css')
+	img(src="/images/swisscom-logo.jpg" height="50" align="right" style="padding-right:30px")
+	p(style="font-size:30px; padding-top:10px; padding-left:30px; margin:0px") SaaS based Development Tool Chain
+	p(align="right" style="margin-bottom:0px; padding-right:30px")
+		a(class="link" href="#Piston") piston
+			a  | 
+		a(class="link" href="#PLUMgrid") PLUMgrid
+			a  | 
+		a(class="link" href="#boundary") boundary
+	h1(style="margin:0px")
+		a(id="Piston") Piston
+	div(id='grad')
+		div(id='table')
+			h2.
+				Zendesk
+			- var noentry = true
+			table(width="100%")
+				tr
+					td(width="10%") ID
+					td(width="50%") Topic
+					td(width="10%") Priority
+					td(width="10%") Status
+					td(width="20%") Processed
+				each ticket, i in ticketlist
+					if "piston" == ticket.source
+						- noentry = false
+						tr
+							td #{ticket.source}
+							td(title='#{ticket.source}') #{ticket.source}
+							td #{ticket.source}
+							td #{ticket.source}
+							td #{ticket.source}
+						//
+							if ticket.processed == false
+								td(style='color: darkred') #{ticket.processed}
+							else
+								td(style='color: #192d6c') #{ticket.processed}
+				if (noentry)
+					tr
+						td(colspan="100%")
+							i No entries found.
+//
+		div(id='table')
+			h2.
+				Pivotal Tracker
+			- var noentry = true
+			table(width="100%")
+				tr
+					td(width="10%") ID
+					td(width="50%") Topic
+					td(width="10%") Priority
+					td(width="10%") Status
+					td(width="20%") Processed
+				each ticket, i in ticketlist
+					if "piston" == ticket.partner && "roadmap" == ticket.type
+						- noentry = false
+						tr
+							td #{ticket.id}
+							td(title='#{ticket.description}') #{ticket.topic}
+							td #{ticket.priority}
+							td #{ticket.status}
+							if ticket.processed == false
+								td(style='color: darkred') #{ticket.processed}
+							else
+								td(style='color: #192d6c') #{ticket.processed}
+				if (noentry)
+					tr
+						td(colspan="100%")
+							i No entries found.	
+	p(style="clear:both")
+	h1
+		a(id="PLUMgrid") PLUMgrid
+	div(id='grad')
+		div(id='table')
+			h2.
+				Tool 1
+			- noentry = true
+			table(width="100%")
+				tr
+					td(width="10%") ID
+					td(width="50%") Topic
+					td(width="10%") Priority
+					td(width="10%") Status
+					td(width="20%") Processed
+				each ticket, i in ticketlist
+					if "PLUMgrid" == ticket.partner
+						- noentry = false
+						tr
+							td #{ticket.id}
+							td(title='#{ticket.description}') #{ticket.topic}
+							td #{ticket.priority}
+							td #{ticket.status}
+							if ticket.processed == false
+								td(style='color: darkred') #{ticket.processed}
+							else
+								td(style='color: #192d6c') #{ticket.processed}
+				if (noentry)
+					tr
+						td(colspan="100%")
+							i No entries found.
+		div(id='table')
+			h2.
+				Tool 2
+	p(style="clear:both")
+	h1
+		a(id="boundary") boundary
+	div(id='grad')
+		div(id='table')
+			h2.
+				Tool 1
+			- noentry = true
+			table(width="100%")
+				tr
+					td(width="10%") ID
+					td(width="50%") Topic
+					td(width="10%") Priority
+					td(width="10%") Status
+					td(width="20%") Processed
+				each ticket, i in ticketlist
+					if "boundary" == ticket.partner
+						- noentry = false
+						tr
+							td #{ticket.id}
+							td(title='#{ticket.description}') #{ticket.topic}
+							td #{ticket.priority}
+							td #{ticket.status}
+							if ticket.processed == false
+								td(style='color: red') #{ticket.processed}
+							else
+								td(style='color: #192d6c') #{ticket.processed}
+				if (noentry)
+					tr
+						td(colspan="100%")
+							i No entries found.

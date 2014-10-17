@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Toolchain</title>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link href="css/scrolling-nav.css" rel="stylesheet">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container" id="nav-container">
+			<div class="navbar-header page-scroll">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand page-scroll" href="#page-top">Toolchain</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<div>
+					<ul class="nav navbar-nav">
+						<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+						<li class="hidden">
+							<a class="page-scroll" href="#page-top"></a>
+						</li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+							Tickets <span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu" role="menu">
+								<li>
+									<a class="page-scroll" href="#ticketsPiston">Piston</a>
+								</li>
+								<li>
+									<a class="page-scroll" href="#ticketsPlumgrid">PLUMgrid</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a class="page-scroll" href="#users">Users</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<img src="images/swisscom-logo.png"></img>
+				</div>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container -->
+	</nav>
+
+	<!-- Intro Section -->
+	<section id="intro" class="intro-section">
+		<div class="container">
+			<div class="row">
+				<h1>SaaS based Development Tool Chain</h1>
+				<div class="col-lg-6">
+					<h2>Piston</h2>
+					<div class="demo-container">
+						<div id="pistonPlaceholder" class="demo-placeholder"></div>
+					</div>
+					<p id="pie-piston"></p>
+					<a class="btn btn-default page-scroll" href="#ticketsPiston" style="width:100%">detail information about <i>Piston</i> tickets</a>
+				</div>
+				<div class="col-lg-6">
+					<h2>PLUMgrid</h2>
+					<div class="demo-container">
+						<div id="plumgridPlaceholder" class="demo-placeholder"></div>
+					</div>
+					<p id="pie-plumgrid"></p>
+					<a class="btn btn-default page-scroll" href="#ticketsPlumgrid" style="width:100%">detail information about <i>PLUMgrid</i> tickets</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Piston Section -->
+	<section id="ticketsPiston" class="about-section">
+		<div class="container">
+			<div class="row">
+				<h1>Piston</h1>
+				<div class="col-lg-6">
+					<div>
+						<h2>Zendesk</h2>
+						<div id="scroll">
+							<table id="piston" class="ticket">
+								<thead>
+									<tr>
+										<th>ID</th>
+										<th>Topic</th>
+										<th><div style="overflow: hidden">Priority</div></th>
+										<th><div style="overflow: hidden">Status</div></th>
+										<th><div style="overflow: hidden">Processed</div></th>
+									</tr>
+								</thead>
+								<tbody></tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<h2>Ticket Traffic (mocked)</h2>
+					<div id="piston-traffic-container" class="demo-container">
+						<div id="piston-traffic-placeholder" class="demo-placeholder"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- PLUMgrid Section -->
+    <section id="ticketsPlumgrid" class="services-section">
+        <div class="container">
+            <div class="row">
+                <h1>PLUMgrid</h1>
+				<div class="col-lg-6">
+					<h2>Trello</h2>
+					<div id="scroll">
+						<table id="plumgrid" class="ticket">
+							<thead>
+								<tr>
+									<th>ID</th>
+									<th>Topic</th>
+									<th><div style="overflow: hidden">Priority</div></th>
+									<th><div style="overflow: hidden">Status</div></th>
+									<th><div style="overflow: hidden">Processed</div></th>
+								</tr>
+							</thead>
+							<tbody></tbody>
+						</table>		
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<h2>Ticket Traffic (mocked)</h2>
+					<div id="plumgrid-traffic-container" class="demo-container">
+						<div id="plumgrid-traffic-placeholder" class="demo-placeholder"></div>
+					</div>
+				</div>
+            </div>
+        </div>
+    </section>
+
+	<!-- User Section -->
+	<section id="users" class="contact-section">
+		<div class="container" id="users-container">
+		<form name="adduser" id="target" role="form">
+			<div class="row">
+				<h1>Users</h1>
+					<div class="col-lg-6">
+						<div id="table">
+						<h2>User</h2>
+							<table class="user" id="loaduser">
+								<tr>
+									<td colspan="3">
+										If you intend to create a new user, there is no ID required (it will be created automatically). However, you can load an existing user by providing the ID.
+									</td>
+								</tr>
+								<tr>
+									<td><b>ID</b></td>
+									<td><label for="id">existing user</label></td>
+									<td>
+										<input type="text" name="id" id="id" class="form-control input-sm" placeholder="Enter ID of an existing user">
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>
+										<div class="btn-group">
+											<button type="button" id="butMapping" class="btn btn-default btn-sm">load user</button>
+											<button type="button" id="butNew" class="btn btn-default btn-sm">create user</button>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div id="mapping">
+							<h2>Tool</h2>
+							<table class="user">
+								<tr>
+									<td><b>Source</b></td>
+									<td><label for="source">company <b>*</b></label></td>
+									<td>
+										<input type="text" name="source" id="source" class="form-control">
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td><label for="sourceSystem">tool name <b>*</b></label></td>
+									<td>
+										<select name="sourceSystem" id="sourceSystem" class="btn btn-xs">
+											<option selected disabled hidden value="" id="default"></option>
+											<option value="trello" id="trello">Trello</option>
+											<option value="zendesk" id="zendesk">Zendesk</option>
+										</select> 
+									</td>
+								</tr>
+							</table>
+							<table class="user">
+								<tr>
+									<td><b>Credentials</b></td>
+									<td><label for="token">token <b>*</b></label></td>
+									<td>
+										<input type="text" name="token" id="token" class="form-control">
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td><label for="user">user <b>*</b></label></td>
+									<td>
+										<input type="text" name="user" id="user" class="form-control">
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td><label for="password">password <b>*</b></label></td>
+									<td>
+										<input type="password" name="password" id="password" class="form-control">
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td><label for="url">url <b>*</b></label></td>
+									<td>
+										<input type="text" name="url" id="url" class="form-control">
+									</td>
+								</tr>
+							</table>
+							<table class="user">
+								<tr>
+									<td><b>Type</b></td>
+									<td>
+										<div class="checkbox">
+											<label><input type="checkbox" name="cb_defect" id="defectBox"> defect</label>
+										</div>
+									</td>
+									<td>
+										<input type="text" name="defect" id="defect" class="form-control">
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>
+										<div class="checkbox">
+											<label><input type="checkbox" name="cb_roadmap" id="roadmapBox"> roadmap</label>
+										</div>
+									</td>
+									<td>
+										<input type="text" name="roadmap" id="roadmap" class="form-control">
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>
+										<div class="checkbox">
+											<label><input type="checkbox" name="cb_customerIndividual" id="ciBox"> ci</label>
+										</div>
+									</td>
+									<td>
+										<input type="text" name="customerIndividual" id="ci" class="form-control">
+									</td>
+								</tr>
+							</table>
+						</div>					
+					</div>
+				
+					<div class="col-lg-6">
+						<div id="mapping">
+							<h2>Mapping</h2>
+							<table id="ticketstatuses" class="user"></table>
+							<table id="labeltypes" class="user"></table>
+							<table id="prioritystatuses" class="user"></table>
+							<table id="tickettypes" class="user"></table>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="btn-group" id="mapping">
+						<button type="button" id="butCancel" class="btn btn-default btn-sm">cancel</button>
+						<button type="reset" class="btn btn-default btn-sm">reset</button>
+						<button type="submit" class="btn btn-default btn-sm">submit</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</section>
+
+	<!-- jQuery Version 1.11.0 -->
+	<script src="js/jquery-1.11.0.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- Scrolling Nav JavaScript -->
+	<script src="js/jquery.easing.min.js"></script>
+	<script src="js/scrolling-nav.js"></script>
+	
+	<!-- Webservice -->
+	<script src="js/webservice.js"></script>
+	
+	<!-- flot -->
+	<!-- diagram -->
+	<script language="javascript" type="text/javascript" src="js/plugins/flot/jquery.flot.js"></script>
+	<script language="javascript" type="text/javascript" src="js/plugins/flot/jquery.flot.resize.js"></script>
+	<script src="js/charts/line.js"></script>
+	<!-- pie -->
+	<script language="javascript" type="text/javascript" src="js/plugins/flot/jquery.flot.pie.js"></script>
+	<script src="js/charts/pie.js"></script>
+
+</body>
+
+</html>

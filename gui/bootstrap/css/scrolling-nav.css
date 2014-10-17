@@ -1,0 +1,224 @@
+/*!
+ * Start Bootstrap - Scrolling Nav HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+@media(min-width:767px) {
+    .navbar {
+        padding: 20px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+    }
+}
+
+/* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
+The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children 
+of those sections to manage the look and feel of the site. */
+
+.intro-section {
+    height: auto;
+    padding-top: 150px;
+    text-align: center;
+    background: #fff;
+}
+
+.about-section {
+    height: auto;
+    padding-top: 150px;
+    text-align: center;
+    background: #eee;
+}
+
+.services-section {
+    height: auto;
+    padding-top: 150px;
+    text-align: center;
+    background: #fff;
+}
+
+.contact-section {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+	background: -webkit-linear-gradient(#eee, rgba(238,238,238,0)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#eee, rgba(238,238,238,0)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#eee, rgba(238,238,238,0)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#eee, rgba(238,238,238,0)); /* Standard syntax (must be last) */
+}
+ 
+/* Overwrite some of the default styles. */
+h1 {
+	color: #192d6c;
+}
+h2 {
+	text-align: left;
+	font-size: 20px;
+	font-style: italic;
+}
+p {
+	text-align: left;
+	font-style: italic;
+}
+b {
+	color: #192d6c;
+}
+.ticket {
+	table-layout: fixed;
+	width: 100%;
+}
+.ticket th , .ticket td  {
+    border: 1px solid grey;
+    border-collapse: collapse;
+	text-align: left;
+	padding: 3px;
+}
+.ticket td:nth-child(1), .ticket th:nth-child(1)	{
+	width: 20%;
+	word-wrap: break-word;
+}
+.ticked td:nth-child(2), .ticket th:nth-child(2)	{
+	width: 35%;
+}
+.ticked td:nth-child(3), .ticket th:nth-child(3)	{
+	width: 15%;
+	overflow: hidden;
+}
+.ticked td:nth-child(4), .ticket th:nth-child(4)	{
+	width: 15%;
+}
+.ticked td:nth-child(5), .ticket th:nth-child(5)	{
+	width: 15%;
+}
+.ticket tr:nth-child(odd)	{
+    background-color: #ffffff;
+}
+.ticket tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+.ticket th {
+    background-color: #192d6c;
+	color: #f1f1f1;
+	font-weight: bold;
+}
+.user  {
+	border-top: 1px solid #192d6c;
+	width: 100%;
+	text-align: left;
+	margin-bottom: 10px;
+}
+.user th, .user td  {
+    border: 0px;
+	height: 25px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.user td:nth-child(1)	{
+    width: 35%;
+}
+.user td:nth-child(2)	{
+    width: 25%;
+}
+.user td:nth-child(3)	{
+    width: 40%;
+}
+.form-control:not(.input-sm) {
+   height: 18px;
+   font-size: 12px;
+   line-height: 14px;
+   padding-top: 0px;
+   padding-bottom: 0px;
+   margin: 0px;
+}
+.radio, .checkbox {
+	min-height: 0px; 
+	margin: 0px;  
+}
+#loaduser td {
+	padding-top: 9px;
+	padding-bottom: 10px;
+}
+label{
+	font-weight: normal;
+	margin: 0px;
+}
+.btn-xs {
+	border-color:#adadad;
+}
+#users, 
+#ticketsPiston, 
+#ticketsPlumgrid {
+	padding-top: 75px;
+}
+#intro {
+	padding-top: 100px;
+}
+#scroll {
+	height: 300px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.demo-container {
+	box-sizing: border-box;
+	width: 100%;
+	/*display: block;*/
+	height: 300px;
+	padding: 20px 15px 15px 15px;
+	margin: 0px 0px 15px 0px;
+	border: 1px solid #ddd;
+	position: relative;
+	background: #fff;
+	background: linear-gradient(#f6f6f6 0, #fff 50px);
+	background: -o-linear-gradient(#f6f6f6 0, #fff 50px);
+	background: -ms-linear-gradient(#f6f6f6 0, #fff 50px);
+	background: -moz-linear-gradient(#f6f6f6 0, #fff 50px);
+	background: -webkit-linear-gradient(#f6f6f6 0, #fff 50px);
+	box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+	-o-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+	-ms-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+#piston-traffic-container,
+#plumgrid-traffic-container {
+	width: 100%;
+	overflow: auto;
+}
+.demo-placeholder {
+	width: 100%;
+	height: 100%;
+	font-size: 14px;
+	line-height: 1.2em;
+}
+.legend table {
+	border-spacing: 5px;
+}
+.legendLabel {
+	text-align: left;
+	padding-left: 5px;
+}
+.container:not(#nav-container) {
+	padding-bottom: 58px;
+}
+img {
+	height: 40px;
+	float: right;
+	padding-top: 10px;
+	margin-bottom: 10px;
+	margin-right: 15px;
+}

@@ -1,0 +1,30 @@
+	{
+	"name": "toolchain",
+	"version": "1.0.0",
+	"private": true,
+	"author": "Cedric Amstalden, Kevin Duss und Gordian Stritmatter",
+	"description": "SaaS Toolchain",
+	"scripts": {
+    "start": "node listener"
+  },
+  "dependencies": {
+    "querystring": "*",
+    "express": "~4.0.0",
+    "serve-favicon": "~2.1.3",
+    "morgan": "~1.0.0",
+    "cookie-parser": "~1.0.1",
+    "body-parser": "~1.0.0",
+    "debug": "~0.7.4",
+    "jade": "~1.3.0",
+    "mongodb": "*",
+    "monk": "*",
+    "mongoose": "3.8.16",
+    "node-uuid": "1.4.1",
+    "node-zendesk": "0.0.15",
+    "node-trello": "*",
+    "request": "2.45.0"
+  },
+  "engines": {
+	"node": "0.10.x"
+  }
+}

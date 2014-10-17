@@ -1,0 +1,13 @@
+{
+	"name": "toolchainapi",
+	"version": "1.0.0",
+	"main": "server.js",
+	"author": "Cedric Amstalden, Kevin Duss und Gordian Stritmatter",
+	"description": "Backend for Swisscom SaaS Toolchain",
+	"dependencies": {
+		"express": "~4.0.0",
+		"mongoose": "3.8.16",
+   		"node-uuid": "1.4.1",
+		"body-parser": "~1.0.1"
+	}
+}
